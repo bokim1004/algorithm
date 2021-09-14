@@ -67,12 +67,18 @@ const removeDuplicatess = (nums) => {
 
 <div>
   (j) is needed to iterate through the given array and second pointer (i) is
-  needed to place a unique number to the position next to it. 1. Return 0 if the
-  given array is empty. 2. Declare two pointers, i and j and set them to 0 and
-  1, respectively. 3.Use a while loop to check if the number with index j is
-  equal to the number with index i. 4.If not, increment i by 1 and copy the
-  value of the number with index j to the element at the index i and then
-  increment j by 1. 5.If they are equal,increment j to skip the duplicate. 6.
-  After the loop finishes,return the length of the unique numbers,which equals
+  needed to place a unique number to the position next to it.
+  <br />
+  1. Return 0 if the given array is empty.
+  <br />
+  2. Declare two pointers, i and j and set them to 0 and 1, respectively.
+  <br />
+  3.Use a while loop to check if the number with index j is equal to the number
+  with index i. <br />
+  4.If not, increment i by 1 and copy the value of the number with index j to
+  the element at the index i and then increment j by 1. <br />
+  5.If they are equal,increment j to skip the duplicate.
+  <br />
+  6.After the loop finishes,return the length of the unique numbers,which equals
   to i+1.
 </div>;
