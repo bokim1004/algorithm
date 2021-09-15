@@ -77,7 +77,7 @@ const removeDuplicatess = (nums) => {
   with index i. <br />
   4.If not, increment i by 1 and copy the value of the number with index j to
   the element at the index i and then increment j by 1. <br />
-  5.If they are equal,increment j to skip the duplicate.
+  5.If they are equal, increment j to skip the duplicate.
   <br />
   6.After the loop finishes,return the length of the unique numbers,which equals
   to i+1.
