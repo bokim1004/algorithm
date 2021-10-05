@@ -21,17 +21,11 @@
 <div>Input: nums = [5,4,-1,7,8]</div>;
 <div>Output: 23</div>;
 //위 배열의 경우 아예 배열값들을 다 더하는 것이 가장 큰 숫자다.
-
+// Kadane's Algorithm
 let maxSubArray = function (nums) {
   for (let i = 1; i < nums.length; i++) {
+    // Math.max함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환한다.
     nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
   }
   return Math.max(...nums);
 };
-
-// var maxSubArray = function(nums) {
-//     for (let i = 1; i < nums.length; i++) {
-//         nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
-//     };
-//     return Math.max(...nums);
-// };
