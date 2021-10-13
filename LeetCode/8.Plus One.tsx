@@ -35,9 +35,11 @@
 
 <div>Answer</div>;
 
-let digits = [1, 2, 3];
 var plusOne = function (digits) {
   for (var i = digits.length - 1; i >= 0; i--) {
+    //맨마지막 배열의 숫자가 9보다 작다면 1을 더한 값을 리턴하고,
+    if (digits[digits.lenth - 1] < 9) return digits++;
+    //배열에 1을 더한게 9보다 크다면 그 값은 0이다.
     if (++digits[i] > 9) digits[i] = 0;
     else return digits;
   }
@@ -45,4 +47,3 @@ var plusOne = function (digits) {
   digits.unshift(1);
   return digits;
 };
-console.log("digit", digits);
