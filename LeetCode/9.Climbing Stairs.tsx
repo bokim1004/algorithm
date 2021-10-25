@@ -18,8 +18,6 @@
   1step + 1step + 1step 2.1step + 2steps 3.2steps+1step
 </div>;
 
-var climbStairs = function (n) {};
-
 <div>
   위 문제를 풀기 위해 알아야 할 지식 : 동적 계획법 동적계획법은 문제를 풀 떄
   하나의 문제를 여러 하위 문제로 나누어 풀고, 그것들을 결합해서 최종 목적에
@@ -33,3 +31,19 @@ var climbStairs = function (n) {};
   <span>f(n)=n, n이 1 ,2인 경우</span>
   <span> =f(n-1)+f(n-2), n이 3이상인 경우</span>
 </div>;
+
+<div>피보나치 방법</div>;
+
+var climbStairs = function (n) {
+  if (n === 1) {
+    return 1;
+  }
+  let first = 1;
+  let second = 2;
+  for (let i = 3; i <= n; i++) {
+    const third = first + second;
+    first = second;
+    second = third;
+  }
+  return second;
+};
