@@ -35,7 +35,7 @@
 <div>피보나치 방법</div>;
 
 var climbStairs = function (n) {
-  if (n === 1) {
+  if (n === 1 || n === 0) {
     return 1;
   }
   let first = 1;
@@ -46,4 +46,17 @@ var climbStairs = function (n) {
     second = third;
   }
   return second;
+};
+
+<div>또 다른 방법</div>;
+
+var climbStairss = function (n) {
+  var dp = [];
+  dp[0] = 1;
+  dp[1] = 1;
+
+  for (let i = 2; i <= n; i += 1) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+  return dp[n];
 };
