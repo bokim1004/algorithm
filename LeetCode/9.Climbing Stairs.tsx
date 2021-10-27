@@ -51,14 +51,11 @@ var climbStairs = function (n) {
 <div>또 다른 방법</div>;
 
 var climbStairss = function (n) {
-  //값을 담을 dp 변수 생성. 메모이제이션을 이용하기 위해서 
-  //메모이제이션이란 컴퓨터 프로그램이 동일한 계산을 반복해야할 때, 이전에 계산한 값을 메모리에 저장함으로써 동일한 계산의 반복 수행을 제거하여 프로그램 실행 속도를 빠르게 하는 기술
   var dp = [];
-
   dp[0] = 1;
   dp[1] = 1;
 
-  for (let i = 2; i <= n; i++) {
+  for (let i = 2; i <= n; i += 1) {
     dp[i] = dp[i - 1] + dp[i - 2];
   }
   return dp[n];
