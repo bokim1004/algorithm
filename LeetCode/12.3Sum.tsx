@@ -18,11 +18,8 @@ var threeSum = function (nums) {
       //A left pointer will be set to a number that comes immediately after the current number
       let left = i + 1;
       //A right pointer will be set to the number at the end of the array.
-      let right = sortedNums - 1;
+      let right = sortedNums.length - 1;
       //Then we are going to find our current sum which is the sum of our current number,a left number,and a right number.
-      //If the current sum is less than 0, we move the left pointer to the right by one to increase the sum.
-      //Because we earlier sorted the given array in ascending order, we know that each number is greater than the number to its left.
-      //If the current sum is greater than 0, because we know that each number is smaller than the number to its right, we can move the right pointer to the left by one to decrease sum
       while (left < right) {
         const currentSum = sortedNums[i] + sortedNums[left] + sortedNums[right];
         if (currentSum === 0) {
@@ -32,11 +29,16 @@ var threeSum = function (nums) {
           left++;
           right--;
         } else if (currentSum < 0) {
-          left++;
+          left++;    //If the current sum is less than 0, we move the left pointer to the right by one to increase the sum.
+                //Because we earlier sorted the given array in ascending order, we know that each number is greater than the number to its left.
         } else if (currentSum > 0) {
-          right--;
+          right--;  
+          //If the current sum is greater than 0,
+          // because we know that each number is smaller than the number to its right, we can move the right pointer to the left by one to decrease sum
+
         }
       }
     }
   }
+  return result;
 };

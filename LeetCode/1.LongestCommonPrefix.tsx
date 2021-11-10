@@ -5,6 +5,8 @@
   strings. If there is no common prefix, return an empty string "".
 </div>;
 
+<div>Example 1: strs=['flower','flow','flight'] Output:"fl"</div>;
+
 var longestCommonPrefix = function (strs) {
   let prefix = "";
   if (strs === null || strs.length === 0) return prefix;
