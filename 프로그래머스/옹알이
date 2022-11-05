@@ -46,3 +46,10 @@ yemaa
 
 
 ```
+
+또 다른 예시
+```js
+function solution(babbling) {
+    return babbling.filter((word) => word == word.match(/(aya|ye|woo|ma)/gi)?.join("")).length
+}
+``` 
