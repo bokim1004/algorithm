@@ -9,4 +9,3 @@ function solution(n) {
   }
   return even;
 }
-console.log(solution(4));
