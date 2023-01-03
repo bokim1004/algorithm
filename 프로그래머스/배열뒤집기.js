@@ -4,5 +4,3 @@ function solution(num_list) {
   const newArray = num_list.reverse();
   return newArray;
 }
-
-console.log("nuk", solution());
