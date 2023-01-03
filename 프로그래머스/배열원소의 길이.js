@@ -2,6 +2,7 @@
 
 function solution(strlist) {
   //length는 배열의 길이뿐만 아니라 string.length값도 구할 수 있다.
+
   // let strlist = ["We", "are", "the", "world!"];
   var answer = [];
 
