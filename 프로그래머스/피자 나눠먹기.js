@@ -15,8 +15,9 @@ function solution() {
 }
 
 //완전 간단한 답안
-//Math.ceil()함수는 입력받은 숫자를 올림한 정수를 리턴한다.
-//ex) 1.222 =>2, 1.5 =>2, 1.7777=>2
+`Math.ceil()함수는 입력받은 숫자를 올림한 정수를 리턴한다.`;
+`ex) 1.222 =>2, 1.5 =>2, 1.7777=>2`;
+
 function solution(n) {
   return Math.ceil(n / 7);
 }
