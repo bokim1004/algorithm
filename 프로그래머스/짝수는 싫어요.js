@@ -3,7 +3,11 @@
 // ex) n이 10일 때 return [1, 3, 5, 7, 9]
 
 function solution(n) {
-  for (let i = 0; i < n.length; i++) {
-    if (i / 2 !== 0) return [i];
+  let answer = [];
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 !== 0) {
+      answer.push(i);
+    }
   }
+  return answer;
 }
